@@ -3,8 +3,11 @@
 function getUserInput(){
   return $('#shopping-list-entry').val();
 }
+
 function getShoppingItem(event){
-  return $(event.target).closest('.shopping-item');
+  return $(event.target)
+    .parents('.shopping-item-controls')
+    .siblings('.shopping-item');
 }
 
 function getHtml(input) {
